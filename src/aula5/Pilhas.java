@@ -1,10 +1,11 @@
 package aula5;
 
-public class Listas {
+public class Pilhas {
+    
     private String[] v;
     private int fim;
    
-    public Listas(){
+    public Pilhas(){
         v = new String[10];
         fim = -1;
     }
@@ -41,7 +42,7 @@ public class Listas {
             v[getFim()] = valor;
         }
     }
-    public void insertInicio(String valor){
+    private void insertInicio(String valor){
         if(isFull()){
             System.out.println("Não foi possivel");
         }
@@ -53,7 +54,7 @@ public class Listas {
             setFim(getFim() +1);
         }
     }
-    public void insertPos(int pos, String valor){
+    private void insertPos(int pos, String valor){
         if(isFull()){
             System.out.println("Não foi possivel");
         }
@@ -65,7 +66,7 @@ public class Listas {
             setFim(getFim() +1);
         }
     }
-    public String removePos(int pos){
+    private String removePos(int pos){
         String tmp;
         if(isFull() || isEmpty()){
             System.out.println("Não foi possivel");
@@ -84,7 +85,7 @@ public class Listas {
         return removePos(getFim());
     }
     
-    public String removeInicio(){
+    private String removeInicio(){
         return removePos(0);
     }
     public void print(){

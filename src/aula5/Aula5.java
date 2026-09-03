@@ -1,9 +1,22 @@
 package aula5;
-import java.util.Scanner;
+
 public class Aula5 { 
     
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Listas l = new Listas();
+        Filas f = new Filas();
+        Pilhas p = new Pilhas();
         
+        p.insertFim("A");
+        p.insertFim("B");
+        p.insertFim("C");
+        p.insertFim("D");
+        p.insertFim("E");
+        p.insertFim("F");
+        
+        p.removeFim();
+        p.removeFim();
+        p.removeFim();
+        p.print();
     }
 }
